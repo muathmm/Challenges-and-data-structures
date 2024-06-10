@@ -9,3 +9,5 @@
 
 #### Challenge B: Most Frequent Number
 ![Most Frequent Number Whiteboard](whiteboard-challenges/challenge-B.jpg)
+### Challenge 02: Maximum Value
+![Maximum-Value](challenge2/max-value.jpg)
