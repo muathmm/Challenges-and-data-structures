@@ -5,9 +5,12 @@
 ### Whiteboard Challenges
 
 #### Challenge A: Array Reversal
-![Array Reversal Whiteboard](whiteboard-challenges/challenge-A.jpg)
+[Array Reversal Whiteboard](whiteboard-challenges/challenge-A.jpg)
 
 #### Challenge B: Most Frequent Number
-![Most Frequent Number Whiteboard](whiteboard-challenges/challenge-B.jpg)
+[Most Frequent Number Whiteboard](whiteboard-challenges/challenge-B.jpg)
+
 ### Challenge 02: Maximum Value
-![Maximum-Value](challenge2/max-value.jpg)
+[Maximum Value Whiteboard](challenge2/max-value.jpg)
+### Challenge 03: Remove-Middle-Value
+[Remove Middle Value from Array  Whiteboard](whiteboard-challenges/RemoveMiddleValuefromArray.jpg)
