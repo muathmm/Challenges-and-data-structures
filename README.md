@@ -14,5 +14,4 @@
 [Maximum Value Whiteboard](challenge2/max-value.jpg)
 ### Challenge 03: Remove-Middle-Value
 [Remove Middle Value from Array  Whiteboard](whiteboard-challenges/remove-middle.jpg)
-### Challenge 04: Insert Middle Value
-[insert Middle Value from Array  Whiteboard](whiteboard-challenges/Insert-Middle.jpg)
+
