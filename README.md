@@ -15,5 +15,6 @@
 ### Challenge 03: Remove-Middle-Value
 
 [insert Middle Value from Array  Whiteboard](whiteboard-challenges/Insert-Middle.jpg)
-### Challenge 04: Insert Middle Value
-[insert Middle Value from Array  Whiteboard](whiteboard-challenges/Insert-Middle.jpg)
+
+### Challenge 05: Finding Duplicate Elements in an Array
+[Finding Duplicate Elements in an Array](Challenges/FindDuplicates/findDuplicates.png)
