@@ -17,4 +17,4 @@
 [insert Middle Value from Array  Whiteboard](whiteboard-challenges/Insert-Middle.jpg)
 
 ### Challenge 05: Finding Duplicate Elements in an Array
-[Finding Duplicate Elements in an Array](Challenges/FindDuplicates/findDuplicates.png)
+[Finding Duplicate Elements in an Array](whiteboard-challenges/FindDuplicate.jpg)
