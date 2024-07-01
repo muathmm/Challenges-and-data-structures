@@ -23,4 +23,4 @@
 [Finding Duplicate Elements in an Array](whiteboard-challenges/FindDuplicate.jpg)
 
 ### Challenge 06: Finding Common Elements in two arrays
-[Finding Duplicate Elements in an Array](whiteboard-challenges/CommonElements.jpg)
+[Finding common Elements ](whiteboard-challenges/CommonElements.jpg)
