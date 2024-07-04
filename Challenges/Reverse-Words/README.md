@@ -1,26 +1,32 @@
-# challenges-and-data-structures
+# Reverse Words in a String
 
-## Table of Contents
+## Overview
 
-### Whiteboard Challenges
+This algorithm reverses the order of words in a given string.
 
-#### Challenge A: Array Reversal
-[Array Reversal Whiteboard](whiteboard-challenges/challenge-A.jpg)
+## Algorithm Steps
 
-#### Challenge B: Most Frequent Number
-[Most Frequent Number Whiteboard](whiteboard-challenges/challenge-B.jpg)
+1. **Handle Empty or Whitespace Input**: Check if the input string is null or consists only of whitespace. If so, return the input as it is.
+2. **Split the Input String into Words**: Initialize a list to store words. Use a loop to iterate through the input string and identify word boundaries (spaces). Add each identified word to the list.
+3. **Reverse the List of Words**: Use a two-pointer technique to swap the elements in the list from both ends towards the center.
+4. **Reconstruct the Result String**: Initialize an empty string for the result. Concatenate the words from the reversed list into the result string, inserting spaces as necessary.
+5. **Return the Result**: Return the final string with words in reversed order.
 
-### Challenge 02: Maximum Value
-[Maximum Value Whiteboard](challenge2/max-value.jpg)
-### Challenge 03: Remove-Middle-Value
+## Complexity Analysis
 
-[Remove Middle Value from Array  Whiteboard](whiteboard-challenges/remove-middle.jpg)
+- **Time Complexity**: \( O(n) \)
+  - Splitting the string into words requires \( O(n) \) time, where \( n \) is the length of the input string.
+  - Reversing the list of words requires \( O(m/2) \) time, where \( m \) is the number of words (which is proportional to \( n \)).
+  - Reconstructing the result string requires \( O(n) \) time.
+  - Overall, the time complexity is \( O(n) \).
 
-### Challenge 04: insert-Middle-Value
+- **Space Complexity**: \( O(n) \)
+  - The space required for the list of words is proportional to the length of the input string.
+  - The space required for the result string is also proportional to the length of the input string.
+  - Overall, the space complexity is \( O(n) \).
 
-[insert Middle Value from Array  Whiteboard](whiteboard-challenges/Insert-Middle.jpg)
-### Challenge 05: Finding Duplicate Elements in an Array
-[Finding Duplicate Elements in an Array](whiteboard-challenges/FindDuplicate.jpg)
-
-### Challenge 06: Finding Common Elements in two arrays
-[Finding common Elements ](whiteboard-challenges/CommonElements.jpg)
+## Example
+string input = "Hello World";
+string reversedWords = ReverseWords(input);
+// Expected output: "World Hello"
+ ### ![Finding Duplicate Elements in an Array](consoleScreen.png)

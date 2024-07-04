@@ -1,36 +1,28 @@
-#  Reverse Words in a String CC-6-B
+# Common Elements in an Array
 
 ## Overview
 
-This algorithm reverses the order of words in a given string.
+This algorithm finds common elements between two given arrays and returns them as a result array.
 
 ## Algorithm Steps
 
-1. **Handle Empty or Whitespace Input**: Check if the input string is null or consists only of whitespace. If so, return the input as it is.
-2. **Split the Input String into Words**: Initialize a list to store words. Use a loop to iterate through the input string and identify word boundaries (spaces). Add each identified word to the list.
-3. **Reverse the List of Words**: Use a two-pointer technique to swap the elements in the list from both ends towards the center.
-4. **Reconstruct the Result String**: Initialize an empty string for the result. Concatenate the words from the reversed list into the result string, inserting spaces as necessary.
-5. **Return the Result**: Return the final string with words in reversed order.
+1. **Initialize**: Start by initializing necessary variables and data structures.
+2. **Iterate through Arrays**: Loop through each element of the first array.
+3. **Check for Common Elements**: For each element in the first array, check if it exists in the second array.
+4. **Collect Common Elements**: Collect elements that appear in both arrays into a temporary array.
+5. **Create Result Array**: Create a result array to store the collected common elements.
 
 ## Complexity Analysis
 
-- **Time Complexity**: \( O(n) \)
-  - Splitting the string into words requires \( O(n) \) time, where \( n \) is the length of the input string.
-  - Reversing the list of words requires \( O(m/2) \) time, where \( m \) is the number of words (which is proportional to \( n \)).
-  - Reconstructing the result string requires \( O(n) \) time.
-  - Overall, the time complexity is \( O(n) \).
-
-- **Space Complexity**: \( O(n) \)
-  - The space required for the list of words is proportional to the length of the input string.
-  - The space required for the result string is also proportional to the length of the input string.
-  - Overall, the space complexity is \( O(n) \).
+- **Time Complexity**: O(n * m), where n is the number of elements in the first array and m is the number of elements in the second array.
+- **Space Complexity**: O(min(n, m)), where n and m are the lengths of the two input arrays.
 
 ## Example
 
-
-string input = "Hello World";
-string reversedWords = ReverseWords(input);
-// Expected output: "World Hello"
-
+int[] array1 = { 1, 2, 3, 0 };
+int[] array2 = { 2, 3, 4, 9 };
+int[] commonElements = FindCommonElements(array1, array2);
+ Expected output: commonElements = [2, 3]
+ ### ![Finding Duplicate Elements in an Array](commonElements.png)
 
 
