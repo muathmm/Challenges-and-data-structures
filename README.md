@@ -26,3 +26,8 @@
 [Finding common Elements ](Challenges/Common-Elements/CommonElements.jpg)
 ### Challenge 06-B: Reverse Words
 [Reverse Words ](Challenges/Reverse-Words/reversString.jpg)
+
+## Whiteboard Data Structures
+
+### Data Structure: Linked List
+[Linked List ](DataStructures/LinkedList/linkedList.jpg)
