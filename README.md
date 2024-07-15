@@ -30,4 +30,8 @@
 ## Whiteboard Data Structures
 
 ### Data Structure: Linked List
-[Linked List ](DataStructures/LinkedList/linkedList.jpg)
+[Linked List includes Method ](DataStructures/LinkedList/LinkedListIncloudesMethode.jpg)
+
+[Linked List Remove Method ](DataStructures/LinkedList/RemoveMethod.jpg)
+
+[Linked List print List Method ](DataStructures/LinkedList/printMethod.jpg)
