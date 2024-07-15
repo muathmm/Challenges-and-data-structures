@@ -48,5 +48,30 @@ namespace LinkedListTests
 
 
         }
+
+
+        [Fact]
+        public void RemoveDublicateTest()
+        {
+            Node nodeHead = new Node(10, null);
+            linkedList linked = new linkedList(nodeHead);
+            Node node2 = new Node(20, null);
+            nodeHead.next = node2;
+            Node node3 = new Node(20, null);
+            node2.next = node3;
+            Node node4 = new Node(30, null);
+            node3.next = node4;
+            Node node5 = new Node(30, null);
+            node4.next = node5;
+
+            string resultTest = linked.RemoveDuplicate();
+
+            Assert.Equal("10->20", resultTest);
+
+
+
+
+
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -102,6 +103,31 @@ namespace LinkedList
             return result;
 
         }
+        public String RemoveDuplicate() {
+            if (Head == null) return "";
+
+            Node current=Head;
+            while (current != null)
+            {
+                Node index = current;
+                while (index.next != null)
+                {
+                    if (current.data == index.next.data)
+                    {
+                        index.next = index.next.next;
+                    }
+                    else
+                    {
+                        index = index.next;
+                    }
+                }
+                current = current.next;
+            }
+            return  PrintList();
+
+
+        }
+      
 
     }
 }
