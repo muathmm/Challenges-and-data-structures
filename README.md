@@ -37,4 +37,4 @@
 [Linked List print List Method ](DataStructures/LinkedList/printMethod.jpg)
 ### Data Structure: Linked List Challenge 7
 
-[Linked List Remove Duplicate ](DataStructures/LinkedList/RemoveDuplicate/RemoveDuplicate.jpg)
+[Linked List Remove Duplicate ](DataStructures/LinkedList/REmoveDuplicate/RemoveDuplicate.jpg)
