@@ -66,7 +66,7 @@ namespace LinkedListTests
 
             string resultTest = linked.RemoveDuplicate();
 
-            Assert.Equal("10->20", resultTest);
+            Assert.Equal("10->20->30", resultTest);
 
 
 
