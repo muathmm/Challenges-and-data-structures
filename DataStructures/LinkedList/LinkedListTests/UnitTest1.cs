@@ -9,18 +9,18 @@ namespace LinkedListTests
         [Fact]
         public void printListTest()
         {
-            Node nodeHead = new Node(10, null);
+            Node nodeHead = new Node(10);
             linkedList linked = new linkedList(nodeHead);
-            Node node2 = new Node(20, null);
+            Node node2 = new Node(20);
             nodeHead.next = node2;
-            Node node3 = new Node(30, null);
+            Node node3 = new Node(30);
             node2.next = node3;
-            Node node4 = new Node(40, null);
+            Node node4 = new Node(40);
             node3.next = node4;
 
             String resultTest= linked.PrintList();
 
-            Assert.Equal("10->20->30->40", resultTest);
+            Assert.Equal("10->20->30->40->null", resultTest);
          
 
             
@@ -30,13 +30,13 @@ namespace LinkedListTests
         [Fact]
         public void RemoveTest()
         {
-            Node nodeHead = new Node(10, null);
+            Node nodeHead = new Node(10);
             linkedList linked = new linkedList(nodeHead);
-            Node node2 = new Node(20, null);
+            Node node2 = new Node(20);
             nodeHead.next = node2;
-            Node node3 = new Node(30, null);
+            Node node3 = new Node(30);
             node2.next = node3;
-            Node node4 = new Node(40, null);
+            Node node4 = new Node(40);
             node3.next = node4;
 
             bool resultTest = linked.RemoveNode(40);
@@ -53,20 +53,20 @@ namespace LinkedListTests
         [Fact]
         public void RemoveDublicateTest()
         {
-            Node nodeHead = new Node(10, null);
+            Node nodeHead = new Node(10);
             linkedList linked = new linkedList(nodeHead);
-            Node node2 = new Node(20, null);
+            Node node2 = new Node(20);
             nodeHead.next = node2;
-            Node node3 = new Node(20, null);
+            Node node3 = new Node(20);
             node2.next = node3;
-            Node node4 = new Node(30, null);
+            Node node4 = new Node(30);
             node3.next = node4;
-            Node node5 = new Node(30, null);
+            Node node5 = new Node(30);
             node4.next = node5;
 
             string resultTest = linked.RemoveDuplicate();
 
-            Assert.Equal("10->20->30", resultTest);
+            Assert.Equal("10->20->30->null", resultTest);
 
 
 

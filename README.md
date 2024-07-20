@@ -38,3 +38,6 @@
 ### Data Structure: Linked List Challenge 7
 
 [Linked List Remove Duplicate ](DataStructures/LinkedList/REmoveDuplicate/RemoveDuplicate.jpg)
+### Data Structure: Linked List Challenge 8
+
+[Merging Two Sorted Linked Lists ](DataStructures/LinkedList/MergeSorted/merge.png)
