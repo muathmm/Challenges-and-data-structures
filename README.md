@@ -41,3 +41,10 @@
 ### Data Structure: Linked List Challenge 8
 
 [Merging Two Sorted Linked Lists ](DataStructures/LinkedList/MergeSorted/merge.png)
+
+### Data Structure: Stack $ Queue Challenge 9
+#### Data Structure: Stack Whiteboard 
+[ Data Structure: Stack](DataStructures/Stack&Queue/Stack.png)
+
+#### Data Structure: Queue Whiteboard 
+[ Data Structure: Queue](DataStructures/Stack&Queue/queue.png)
