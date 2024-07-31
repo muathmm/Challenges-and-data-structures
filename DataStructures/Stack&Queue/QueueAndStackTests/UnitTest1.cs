@@ -1,4 +1,5 @@
 using StackAndQueue;
+using StackAndQueue.ReverseStackUsingQueue;
 using System.Collections;
 
 namespace QueueAndStackTests
@@ -176,6 +177,54 @@ namespace QueueAndStackTests
             // Act & Assert
             Exception ex = Assert.Throws<Exception>(() => queue.peek());
             Assert.Equal("the queue is empty", ex.Message);
+        }
+        [Fact]
+        public void ReverseStack_MultipleElements_StackReversed()
+        {
+            // Arrange
+            StackWithReverse stack = new StackWithReverse();
+            stack.push(1);
+            stack.push(2);
+            stack.push(3);
+            stack.push(4);
+
+            // Act
+            stack.ReverseStack();
+
+            // Assert
+            Assert.Equal(1, stack.peek()); // 1 at the top
+            Assert.Equal(1, stack.pop()); //  1
+            Assert.Equal(2, stack.pop()); //  2
+            Assert.Equal(3, stack.pop()); //  3
+            Assert.Equal(4, stack.pop()); //  4
+        }
+
+        [Fact]
+        public void ReverseStack_OneElement_StackUnchanged()
+        {
+            // Arrange
+            StackWithReverse stack = new StackWithReverse();
+            stack.push(1);
+
+            // Act
+            stack.ReverseStack();
+
+            // Assert
+            Assert.Equal(1, stack.peek()); // 
+            Assert.Equal(1, stack.pop()); // 1
+        }
+
+        [Fact]
+        public void ReverseStack_EmptyStack_StackRemainsEmpty()
+        {
+            // Arrange
+            StackWithReverse stack = new StackWithReverse();
+
+            // Act
+            stack.ReverseStack();
+
+            // Assert
+            Assert.True(stack.isEmpty()); 
         }
     }
 }
