@@ -48,3 +48,6 @@
 
 #### Data Structure: Queue Whiteboard 
 [ Data Structure: Queue](DataStructures/Stack&Queue/queue.png)
+
+#### Data Structure CC-9: Satck &  Queue (Reverse Stack Using Queue) Whiteboard 
+[ Data Structure:Reverse Stack](DataStructures/Stack&Queue/ReverseStack.png)

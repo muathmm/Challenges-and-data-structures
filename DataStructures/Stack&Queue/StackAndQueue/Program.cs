@@ -1,4 +1,6 @@
-﻿namespace StackAndQueue
+﻿using StackAndQueue.ReverseStackUsingQueue;
+
+namespace StackAndQueue
 {
     internal class Program
     {
@@ -29,6 +31,22 @@
             Console.WriteLine(q.peek());//2
             q.dequeue();
             Console.WriteLine(q.peek());//3
+
+            StackWithReverse stackReverse = new StackWithReverse();
+            stackReverse.push(1);
+            stackReverse.push(2);
+            stackReverse.push(3);
+            stackReverse.push(4);
+            Console.WriteLine("========================  stackReverse==========================");
+            Console.WriteLine( stackReverse.peek());//4
+            stackReverse.ReverseStack();
+            Console.WriteLine(stackReverse.peek());//1
+            stackReverse.push(5);
+            stackReverse.push(6);
+            Console.WriteLine(stackReverse.peek());//6
+            stackReverse.ReverseStack();
+            Console.WriteLine(stackReverse.peek());//4
+
         }
     }
 }
