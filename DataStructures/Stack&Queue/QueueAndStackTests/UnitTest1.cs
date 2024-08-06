@@ -1,5 +1,6 @@
 using StackAndQueue;
 using StackAndQueue.ReverseStackUsingQueue;
+using StackAndQueue.StackDeleteMiddle;
 using System.Collections;
 
 namespace QueueAndStackTests
@@ -225,6 +226,40 @@ namespace QueueAndStackTests
 
             // Assert
             Assert.True(stack.isEmpty()); 
+        }
+        [Fact]
+        public void DeleteMiddle_OddSizedStack_RemovesMiddleElement()
+        {
+            var stack = new StackWithDeleteMiddle();
+            stack.push(7);
+            stack.push(14);
+            stack.push(3);
+            stack.push(8);
+            stack.push(5);
+
+            stack.DeleteMiddle();
+
+            Assert.Equal(5, stack.pop());
+            Assert.Equal(8, stack.pop());
+            Assert.Equal(14, stack.pop());
+            Assert.Equal(7, stack.pop());
+        }
+
+        [Fact]
+        public void DeleteMiddle_EvenSizedStack_RemovesLowerMiddleElement()
+        {
+            var stack = new StackWithDeleteMiddle();
+            stack.push(7);
+            stack.push(14);
+            stack.push(3);
+            stack.push(8);
+
+            stack.DeleteMiddle();
+
+            Assert.Equal(8, stack.pop());
+     
+            Assert.Equal(14, stack.pop());
+            Assert.Equal(7, stack.pop());
         }
     }
 }
