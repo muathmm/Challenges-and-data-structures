@@ -51,3 +51,6 @@
 
 #### Data Structure CC-9: Satck &  Queue (Reverse Stack Using Queue) Whiteboard 
 [ Data Structure:Reverse Stack](DataStructures/Stack&Queue/ReverseStack.png)
+
+#### Data Structure Stack Challenge: Delete Middle Element of a Stack  Whiteboard 
+[ Data Structure: Delete Middle Element of a Stack](DataStructures/Stack&Queue/DeleteMeddile.png)

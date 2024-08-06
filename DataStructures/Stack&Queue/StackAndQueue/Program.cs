@@ -1,4 +1,5 @@
 ﻿using StackAndQueue.ReverseStackUsingQueue;
+using StackAndQueue.StackDeleteMiddle;
 
 namespace StackAndQueue
 {
@@ -46,6 +47,28 @@ namespace StackAndQueue
             Console.WriteLine(stackReverse.peek());//6
             stackReverse.ReverseStack();
             Console.WriteLine(stackReverse.peek());//4
+
+
+            var stackd= new StackWithDeleteMiddle();
+
+            // Add some elements to the stack
+            stackd.push(7);
+            stackd.push(14);
+            stackd.push(3);
+            stackd.push(8);
+            stackd.push(5);
+
+           
+
+            // Delete the middle element
+            stackd.DeleteMiddle();//3
+            Console.WriteLine("********************************StackWithDeleteMiddle******************************************");//5
+            Console.WriteLine(stackd.pop());//5
+            Console.WriteLine(stackd.pop());//8
+            Console.WriteLine(stackd.pop());//14
+            Console.WriteLine(stackd.pop());//7
+
+
 
         }
     }
