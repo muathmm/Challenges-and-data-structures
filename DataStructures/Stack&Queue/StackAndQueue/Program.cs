@@ -1,4 +1,5 @@
-﻿using StackAndQueue.ReverseStackUsingQueue;
+﻿using StackAndQueue.Min_Stack;
+using StackAndQueue.ReverseStackUsingQueue;
 using StackAndQueue.StackDeleteMiddle;
 
 namespace StackAndQueue
@@ -67,6 +68,47 @@ namespace StackAndQueue
             Console.WriteLine(stackd.pop());//8
             Console.WriteLine(stackd.pop());//14
             Console.WriteLine(stackd.pop());//7
+
+            Console.WriteLine("********************************min  Stack******************************************");
+            MinStack minStack = new MinStack();
+
+        
+            minStack.Push(15);
+            minStack.Push(7);
+            minStack.Push(12);
+            minStack.Push(3);
+
+           
+            Console.WriteLine("Stack after pushing elements:");
+            minStack.PrintStack();
+
+          
+            int min = minStack.GetMin();
+            Console.WriteLine($"Minimum element: {min}");//3
+
+       
+            int popped = minStack.Pop();
+            Console.WriteLine($"Popped element: {popped}");
+            Console.WriteLine("Stack after popping an element:");
+            minStack.PrintStack();
+
+            min = minStack.GetMin();
+            Console.WriteLine($"New minimum element: {min}");
+
+          
+            int peeked = minStack.Peek();
+            Console.WriteLine($"Peeked element: {peeked}");
+         minStack.Push(2);
+            Console.WriteLine("Stack after pushing another element:");
+            minStack.PrintStack();
+
+  
+            min = minStack.GetMin();
+            Console.WriteLine($"New minimum element: {min}");
+
+        
+            bool isEmpty = minStack.IsEmpty();
+            Console.WriteLine($"Is the stack empty? {isEmpty}");
 
 
 
