@@ -1,4 +1,5 @@
 using StackAndQueue;
+using StackAndQueue.Min_Stack;
 using StackAndQueue.ReverseStackUsingQueue;
 using StackAndQueue.StackDeleteMiddle;
 using System.Collections;
@@ -260,6 +261,50 @@ namespace QueueAndStackTests
      
             Assert.Equal(14, stack.pop());
             Assert.Equal(7, stack.pop());
+        }
+
+        [Fact]
+        public void Test_PushAndMin()
+        {
+            MinStack minStack = new MinStack();
+            minStack.Push(10);
+            minStack.Push(5);
+            minStack.Push(20);
+
+            Assert.Equal(5, minStack.GetMin());
+        }
+
+        [Fact]
+        public void Test_PopAndMin()
+        {
+            MinStack minStack = new MinStack();
+            minStack.Push(10);
+            minStack.Push(5);
+            minStack.Push(20);
+            minStack.Pop();
+
+            Assert.Equal(5, minStack.GetMin());
+            minStack.Pop();
+            Assert.Equal(10, minStack.GetMin());
+        }
+
+        [Fact]
+        public void Test_IsEmpty()
+        {
+            MinStack minStack = new MinStack();
+            Assert.True(minStack.IsEmpty());
+            minStack.Push(10);
+            Assert.False(minStack.IsEmpty());
+        }
+
+        [Fact]
+        public void Test_PrintStack()
+        {
+            MinStack minStack = new MinStack();
+            minStack.Push(10);
+            minStack.Push(5);
+            minStack.Push(20);
+            minStack.PrintStack();
         }
     }
 }
