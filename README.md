@@ -56,3 +56,7 @@
 [ Data Structure: Delete Middle Element of a Stack](DataStructures/Stack&Queue/DeleteMeddile.png)
 #### Data Structure Stack Challenge: Minimum Stack Challenge  Whiteboard 
 [ Data Structure: Minimum Stack](DataStructures/Stack&Queue/MinStack.png)
+#### Data Structure Trees Challenge:  Binary  Tree Traverse 
+[ Data Structure: Binary Tree](DataStructures/Trees/BinaryTree.png)
+ 
+[ Data Structure: Binary Search Tree](DataStructures/Trees/BinarySearchTree.png)
