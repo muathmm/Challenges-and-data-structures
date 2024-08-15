@@ -50,6 +50,23 @@
             Console.WriteLine("Checking if 5 exists in BST:");
             contains = bst.Contains(5);
             Console.WriteLine($"Contains 5: {contains}");
+
+            // Miror tree
+            BinaryTree Btree = new BinaryTree();
+            Btree.Root = new Node(4);
+            Btree.Insert(8);
+            Btree.Insert(7);
+            Btree.Insert(12);
+            Btree.Insert(9);
+            Console.WriteLine("////////////////////////////Miror tree/////////////////////////////////");
+            Console.WriteLine("Original InOrder Traversal:");
+            Btree.InOrder(Btree.Root);  // Output: 12 8 9 4 7
+
+            // Mirroring the tree
+            Btree.MirrorTree();
+
+            Console.WriteLine("\nMirrored InOrder Traversal:");
+            Btree.InOrder(Btree.Root);  // Output: 7 4 9 8 12
         }
     }
 }
