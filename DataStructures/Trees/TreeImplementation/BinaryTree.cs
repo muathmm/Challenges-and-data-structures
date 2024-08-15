@@ -1,26 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace TreeImplementation
 {
     public class BinaryTree
     {
-
         public Node Root { get; set; }
 
         public BinaryTree()
         {
             Root = null;
         }
+
         public BinaryTree(int rootValue)
         {
             Root = new Node(rootValue);
         }
-
 
         public void Insert(int value)
         {
@@ -40,7 +34,6 @@ namespace TreeImplementation
                     Insert(node.Left, value);
                 }
             }
-
             else
             {
                 if (node.Right == null)
@@ -52,6 +45,27 @@ namespace TreeImplementation
                     Insert(node.Right, value);
                 }
             }
+        }
+
+        // Method to Mirror the Binary Tree
+        public void MirrorTree()
+        {
+            Mirror(Root);
+        }
+
+        // Helper method for MirrorTree using recursion
+        private void Mirror(Node node)
+        {
+            if (node == null) return;
+
+            // Swap the left and right nodes
+            Node temp = node.Left;
+            node.Left = node.Right;
+            node.Right = temp;
+
+            // Recurse for left and right subtrees
+            Mirror(node.Left);
+            Mirror(node.Right);
         }
 
         public void PreOrder(Node node)
@@ -83,6 +97,8 @@ namespace TreeImplementation
                 Console.Write(node.Data + " ");
             }
         }
+
+ 
 
         public void Print()
         {

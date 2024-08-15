@@ -60,3 +60,4 @@
 [ Data Structure: Binary Tree](DataStructures/Trees/BinaryTree.png)
  
 [ Data Structure: Binary Search Tree](DataStructures/Trees/BinarySearchTree.png)
+[ Data Structure: Binary Tree - Mirror Tree ](DataStructures/Trees/Mirror.png)

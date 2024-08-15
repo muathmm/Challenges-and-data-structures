@@ -1,4 +1,4 @@
-using TreeImplementation;
+﻿using TreeImplementation;
 
 namespace TreeImplementationtest
 {
@@ -139,6 +139,94 @@ namespace TreeImplementationtest
 
             // Assert
             Assert.False(contains, "The tree should not contain the node with data 8.");
+        }
+
+        [Fact]
+        public void MirrorTree_InOrderCheck()
+        {
+            // Arrange - بناء الشجرة
+            BinaryTree Btree = new BinaryTree();
+            Btree.Root = new Node(4);
+            Btree.Insert(2);
+            Btree.Insert(1);
+            Btree.Insert(3);
+            Btree.Insert(6);
+            Btree.Insert(5);
+            Btree.Insert(7);
+
+ 
+            string originalInOrder;
+            using (var consoleOutput = new System.IO.StringWriter())
+            {
+                Console.SetOut(consoleOutput);
+                Btree.InOrder(Btree.Root);
+                originalInOrder = consoleOutput.ToString();
+            }
+
+       
+            Btree.MirrorTree();
+
+          
+            string mirroredInOrder;
+            using (var consoleOutput = new System.IO.StringWriter())
+            {
+                Console.SetOut(consoleOutput);
+                Btree.InOrder(Btree.Root);
+                mirroredInOrder = consoleOutput.ToString();
+            }
+
+          
+            Assert.Equal("1 2 3 4 5 6 7 ", originalInOrder);  // Original InOrder
+            Assert.Equal("7 6 5 4 3 2 1 ", mirroredInOrder);   // Mirrored InOrder
+        }
+
+
+        [Fact]
+        public void MirrorTree_SingleNodeTree()
+        {
+       
+            BinaryTree Btree = new BinaryTree(10);
+
+         
+            var originalInOrder = CaptureConsoleOutput(() => Btree.InOrder(Btree.Root));
+
+      
+            Btree.MirrorTree();
+
+            var mirroredInOrder = CaptureConsoleOutput(() => Btree.InOrder(Btree.Root));
+
+         
+            Assert.Equal("10 ", originalInOrder);  // Original InOrder for single node
+            Assert.Equal("10 ", mirroredInOrder);  // Mirrored InOrder for single node
+        }
+
+
+        [Fact]
+        public void MirrorTree_EmptyTree()
+        {
+      
+            BinaryTree Btree = new BinaryTree();
+
+            var originalInOrder = CaptureConsoleOutput(() => Btree.InOrder(Btree.Root));
+
+     
+            Btree.MirrorTree();
+
+            var mirroredInOrder = CaptureConsoleOutput(() => Btree.InOrder(Btree.Root));
+
+            Assert.Equal("", originalInOrder);  // Original InOrder for empty tree
+            Assert.Equal("", mirroredInOrder);  // Mirrored InOrder for empty tree
+        }
+
+        // Helper function to capture console output
+        private string CaptureConsoleOutput(Action action)
+        {
+            using (var consoleOutput = new System.IO.StringWriter())
+            {
+                Console.SetOut(consoleOutput);
+                action();
+                return consoleOutput.ToString();
+            }
         }
 
     }
