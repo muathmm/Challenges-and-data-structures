@@ -228,6 +228,66 @@ namespace TreeImplementationtest
                 return consoleOutput.ToString();
             }
         }
+        [Fact]
+        public void FindSecondMax_WithValidTree_ReturnsSecondMaxValue()
+        {
+            // Arrange
+            BinaryTree tree = new BinaryTree();
+            tree.Root = new Node(4);
+            tree.Insert(10);
+            tree.Insert(5);
+            tree.Insert(20);
+            tree.Insert(3);
+            tree.Insert(7);
+            tree.Insert(15);
+            tree.Insert(25);
+
+            // Act
+            int? result = tree.FindSecondMax();
+
+            // Assert
+            Assert.Equal(20, result);
+        }
+
+        [Fact]
+        public void FindSecondMax_WithSingleNode_ThrowsInvalidOperationException()
+        {
+            // Arrange
+            BinaryTree tree = new BinaryTree(10);
+
+            // Act & Assert
+            Assert.Throws<InvalidOperationException>(() => tree.FindSecondMax());
+        }
+
+      
+
+        [Fact]
+        public void FindSecondMax_WithNegativeValues_ReturnsSecondMaxValue()
+        {
+            // Arrange
+            BinaryTree tree = new BinaryTree(-15);
+            tree.Insert(-10);
+            tree.Insert(-20);
+            tree.Insert(-5);
+            tree.Insert(-15);
+            tree.Insert(-25);
+
+            // Act
+            int? result = tree.FindSecondMax();
+
+            // Assert
+            Assert.Equal(-10, result); // The maximum is -5, and the second maximum is -10
+        }
+
+        [Fact]
+        public void FindSecondMax_WithEmptyTree_ThrowsInvalidOperationException()
+        {
+            // Arrange
+            BinaryTree tree = new BinaryTree();
+
+            // Act & Assert
+            Assert.Throws<InvalidOperationException>(() => tree.FindSecondMax());
+        }
 
     }
 }
