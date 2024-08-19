@@ -65,8 +65,23 @@
             // Mirroring the tree
             Btree.MirrorTree();
 
-            Console.WriteLine("\nMirrored InOrder Traversal:");
+            Console.WriteLine("\nMirrored InOrder Traversal:\n");
             Btree.InOrder(Btree.Root);  // Output: 7 4 9 8 12
+
+            Console.WriteLine("////////////////////////////second maximum value /////////////////////////////////");
+            BinaryTree btree = new BinaryTree();
+            btree.Root = new Node(4);
+            btree.Insert(10);
+            btree.Insert(5);
+            btree.Insert(20);
+            btree.Insert(3);
+            btree.Insert(7);
+            btree.Insert(15);
+            btree.Insert(25);
+            btree.InOrder(btree.Root);
+
+            int? secondMax = btree.FindSecondMax(); // Output: 20
+            Console.WriteLine($"Second Maximum Value: {secondMax}");
         }
     }
 }

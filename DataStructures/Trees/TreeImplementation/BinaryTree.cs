@@ -115,5 +115,48 @@ namespace TreeImplementation
 
             Print(node.Left, level + 1);
         }
+        public int? FindSecondMax()
+        {
+            if (Root == null)
+            {
+                throw new InvalidOperationException("Tree is empty.");
+            }
+
+            Node current = Root;
+            Node parent = null;
+
+            // Traverse to the maximum node (rightmost node)
+            while (current.Right != null)
+            {
+                parent = current;
+                current = current.Right;
+            }
+
+            // Case 1: If the maximum node has a left subtree, the second max is the largest value in that subtree
+            if (current.Left != null)
+            {
+                return FindMax(current.Left);
+            }
+
+            // Case 2: If there is no left subtree, the second max is its parent
+            if (parent != null)
+            {
+                return parent.Data;
+            }
+
+            // Case 3: Only one node in the tree
+            throw new InvalidOperationException("Tree does not contain a second maximum value.");
+        }
+
+        // Helper method to find the maximum value in a subtree
+        private int FindMax(Node node)
+        {
+            Node current = node;
+            while (current.Right != null)
+            {
+                current = current.Right;
+            }
+            return current.Data;
+        }
     }
 }
