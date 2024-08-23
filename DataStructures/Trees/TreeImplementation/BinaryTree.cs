@@ -158,5 +158,27 @@ namespace TreeImplementation
             }
             return current.Data;
         }
+         // Method to sum the leaf nodes
+        public int SumOfLeafNodes()
+        {
+            return SumOfLeafNodes(Root);
+        }
+
+        // Helper method to sum the leaf nodes recursively
+        private int SumOfLeafNodes(Node node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+
+            if (node.Left == null && node.Right == null)
+            {
+                return node.Data;
+            }
+
+            return SumOfLeafNodes(node.Left) + SumOfLeafNodes(node.Right);
+        }
+
     }
 }

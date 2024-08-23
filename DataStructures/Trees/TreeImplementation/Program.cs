@@ -70,18 +70,24 @@
 
             Console.WriteLine("////////////////////////////second maximum value /////////////////////////////////");
             BinaryTree btree = new BinaryTree();
-            btree.Root = new Node(4);
-            btree.Insert(10);
-            btree.Insert(5);
-            btree.Insert(20);
+            btree.Root = new Node(5);
+            btree.Insert(18);
             btree.Insert(3);
             btree.Insert(7);
             btree.Insert(15);
-            btree.Insert(25);
+            btree.Insert(20);
             btree.InOrder(btree.Root);
 
             int? secondMax = btree.FindSecondMax(); // Output: 20
             Console.WriteLine($"Second Maximum Value: {secondMax}");
+            Console.WriteLine("////////////////////////////Sum of Leaf Nodes /////////////////////////////////");
+
+            Console.WriteLine("Tree Structure:");
+            btree.Print();
+            Console.WriteLine();
+            Console.WriteLine("Sum of Leaf Nodes:");
+            int leafSum = btree.SumOfLeafNodes();  // Should output: 38 (3 + 7 + 15+20)
+            Console.WriteLine($"Sum of leaf nodes: {leafSum}");
         }
     }
 }

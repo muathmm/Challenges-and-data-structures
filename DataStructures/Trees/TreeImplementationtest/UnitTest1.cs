@@ -289,5 +289,58 @@ namespace TreeImplementationtest
             Assert.Throws<InvalidOperationException>(() => tree.FindSecondMax());
         }
 
+        [Fact]
+        public void TestSumOfLeafNodes_PositiveValues()
+        {
+            // Arrange
+            BinaryTree tree = new BinaryTree();
+            tree.Root = new Node(5);
+            tree.Insert(18);
+            tree.Insert(3);
+            tree.Insert(7);
+            tree.Insert(15);
+            tree.Insert(20);
+            // Act  
+
+
+            int leafSum = tree.SumOfLeafNodes();
+
+            // Assert
+            Assert.Equal(38, leafSum); 
+        }
+
+        [Fact]
+        public void TestSumOfLeafNodes_NegativeValues()
+        {
+            // Arrange
+            BinaryTree tree = new BinaryTree();
+            tree.Root = new Node(-4);
+            tree.Insert(-10);
+            tree.Insert(-5);
+            tree.Insert(-20);
+            tree.Insert(-3);
+            tree.Insert(-7);
+            tree.Insert(-15);
+            tree.Insert(-25);
+            // Act
+            int leafSum = tree.SumOfLeafNodes();
+
+            // Assert
+            Assert.Equal(-50, leafSum); // -3 + -7 + -17 + -23 = -50
+        }
+
+        [Fact]
+        public void TestSumOfLeafNodes_EmptyTree()
+        {
+            // Arrange
+            BinaryTree Btree = new BinaryTree();
+
+            // Act
+            int leafSum = Btree.SumOfLeafNodes();
+
+            // Assert
+            Assert.Equal(0, leafSum);
+        }
+
     }
 }

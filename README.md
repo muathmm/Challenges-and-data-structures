@@ -64,3 +64,5 @@
 [ Data Structure: Binary Tree - Mirror Tree ](DataStructures/Trees/Mirror.png)
 
 [ Data Structure: Binary Tree - Second maximum value  ](DataStructures/Trees/secondmaximum.png)
+
+[ Data Structure: Binary Tree - Sum of leaf nodes  ](DataStructures/Trees/Sumofleaf.png)
