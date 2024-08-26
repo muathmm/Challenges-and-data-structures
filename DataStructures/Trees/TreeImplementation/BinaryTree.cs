@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TreeImplementation
 {
@@ -180,5 +181,33 @@ namespace TreeImplementation
             return SumOfLeafNodes(node.Left) + SumOfLeafNodes(node.Right);
         }
 
+        // Method to find the largest value at each level
+        public List<int> LargestLevelValue()
+        {
+            List<int> result = new List<int>();
+            if (Root == null) return result;
+
+            Queue<Node> queue = new Queue<Node>();
+            queue.Enqueue(Root);
+
+            while (queue.Count > 0)
+            {
+                int levelSize = queue.Count;
+                int maxLevelValue = int.MinValue;
+
+                for (int i = 0; i < levelSize; i++)
+                {
+                    Node currentNode = queue.Dequeue();
+                    maxLevelValue = Math.Max(maxLevelValue, currentNode.Data);
+
+                    if (currentNode.Left != null) queue.Enqueue(currentNode.Left);
+                    if (currentNode.Right != null) queue.Enqueue(currentNode.Right);
+                }
+
+                result.Add(maxLevelValue);
+            }
+
+            return result;
+        }
     }
 }

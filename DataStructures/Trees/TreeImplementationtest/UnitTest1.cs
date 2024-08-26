@@ -342,5 +342,43 @@ namespace TreeImplementationtest
             Assert.Equal(0, leafSum);
         }
 
+
+        [Fact]
+        public void LargestLevelValue_ShouldReturnCorrectLargestValues_ForGivenTree()
+        {
+            // Arrange
+            BinaryTree binaryTree = new BinaryTree(5);
+            
+            binaryTree.Insert(18);
+            binaryTree.Insert(3);
+            binaryTree.Insert(7);
+            binaryTree.Insert(20);
+
+            // Expected largest values for each level:
+            // Level 0: 5
+            // Level 1: 18
+            // Level 2: 20
+            List<int> expected = new List<int> { 5, 18, 20 };
+
+            // Act
+            List<int> actual = binaryTree.LargestLevelValue();
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void LargestLevelValue_ShouldReturnEmptyList_ForEmptyTree()
+        {
+            // Arrange
+            BinaryTree binaryTree = new BinaryTree();
+
+            // Act
+            List<int> actual = binaryTree.LargestLevelValue();
+
+            // Assert
+            Assert.Empty(actual);
+        }
+
     }
 }
