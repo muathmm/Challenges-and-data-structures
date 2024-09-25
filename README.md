@@ -35,12 +35,16 @@
 [Linked List Remove Method ](DataStructures/LinkedList/RemoveMethod.jpg)
 
 [Linked List print List Method ](DataStructures/LinkedList/printMethod.jpg)
+
+
 ### Data Structure: Linked List Challenge 7
 
 [Linked List Remove Duplicate ](DataStructures/LinkedList/REmoveDuplicate/RemoveDuplicate.jpg)
 ### Data Structure: Linked List Challenge 8
 
 [Merging Two Sorted Linked Lists ](DataStructures/LinkedList/MergeSorted/merge.png)
+### Data Structure: Linked List Challenge - Rotate by K
+[Linked List - Rotate by K ](DataStructures/LinkedList/RotatebyK.png)
 
 ### Data Structure: Stack $ Queue Challenge 9
 #### Data Structure: Stack Whiteboard 
