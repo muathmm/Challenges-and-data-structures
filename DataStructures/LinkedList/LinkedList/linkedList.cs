@@ -239,5 +239,36 @@ namespace LinkedList
         }
 
 
+        public void RotateLeft(int k)
+        {
+            if (Head == null || k == 0) return;
+
+       
+            Node current = Head;
+            int length = 1; 
+            while (current.next != null)
+            {
+                length++;
+                current = current.next;
+            }
+
+      
+            k = k % length;
+            if (k == 0) return; 
+
+            // Step 3: Find the kth node and its previous node
+            current.next = Head;  // Make the list circular
+            Node newTail = Head;
+            for (int i = 1; i < k; i++)
+            {
+                newTail = newTail.next;
+            }
+
+          
+            Head = newTail.next;
+            newTail.next = null;
+        }
+
+
     }
 }
