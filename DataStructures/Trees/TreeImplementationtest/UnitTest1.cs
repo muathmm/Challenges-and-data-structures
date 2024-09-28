@@ -380,5 +380,57 @@ namespace TreeImplementationtest
             Assert.Empty(actual);
         }
 
+        [Fact]
+        public void Test_PrintRightView_WithGeneralTree()
+        {
+            // Arrange
+            BinaryTree Btree = new BinaryTree();
+            Btree.Root = new Node(2);
+            Btree.Root.Left = new Node(3);
+            Btree.Root.Right = new Node(5);
+            Btree.Root.Left.Left = new Node(4);
+            Btree.Root.Right.Right = new Node(6);
+            Btree.Root.Left.Left.Right = new Node(7);
+
+            // Act & Assert
+            var output = new System.IO.StringWriter();
+            Console.SetOut(output);
+            Btree.PrintRightView(Btree.Root);
+
+            Assert.Equal("2 5 6 7 ", output.ToString());
+        }
+
+        [Fact]
+        public void Test_PrintRightView_WithRightOnlyTree()
+        {
+            // Arrange
+            BinaryTree Btree = new BinaryTree();
+            Btree.Root = new Node(1);
+            Btree.Root.Right = new Node(2);
+            Btree.Root.Right.Right = new Node(3);
+            Btree.Root.Right.Right.Right = new Node(4);
+
+            // Act & Assert
+            var output = new System.IO.StringWriter();
+            Console.SetOut(output);
+            Btree.PrintRightView(Btree.Root);
+
+            Assert.Equal("1 2 3 4 ", output.ToString());
+        }
+
+        [Fact]
+        public void Test_PrintRightView_WithEmptyTree()
+        {
+            // Arrange
+            BinaryTree Btree = new BinaryTree();
+
+            // Act & Assert
+            var output = new System.IO.StringWriter();
+            Console.SetOut(output);
+            Btree.PrintRightView(Btree.Root);
+
+            Assert.Equal("The tree is empty.\r\n", output.ToString());
+        }
+
     }
 }
