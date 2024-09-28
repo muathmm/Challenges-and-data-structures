@@ -99,7 +99,7 @@ namespace TreeImplementation
             }
         }
 
- 
+
 
         public void Print()
         {
@@ -159,7 +159,7 @@ namespace TreeImplementation
             }
             return current.Data;
         }
-         // Method to sum the leaf nodes
+        // Method to sum the leaf nodes
         public int SumOfLeafNodes()
         {
             return SumOfLeafNodes(Root);
@@ -209,5 +209,44 @@ namespace TreeImplementation
 
             return result;
         }
+
+        public void PrintRightView(Node node)
+        {
+            if (node == null)
+            {
+                Console.WriteLine("The tree is empty.");
+                return;
+            }
+
+            Queue<Node> queue = new Queue<Node>();
+            queue.Enqueue(node);
+
+            while (queue.Count > 0)
+            {
+                int levelSize = queue.Count;
+
+                for (int i = 0; i < levelSize; i++)
+                {
+                    Node currentNode = queue.Dequeue();
+
+                    // Print the rightmost element at the current level
+                    if (i == levelSize - 1)
+                    {
+                        Console.Write(currentNode.Data + " ");
+                    }
+
+                    // Add left and right children to the queue
+                    if (currentNode.Left != null)
+                    {
+                        queue.Enqueue(currentNode.Left);
+                    }
+                    if (currentNode.Right != null)
+                    {
+                        queue.Enqueue(currentNode.Right);
+                    }
+                }
+            }
+        }
     }
 }
+ 
