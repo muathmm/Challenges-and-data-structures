@@ -431,6 +431,39 @@ namespace TreeImplementationtest
 
             Assert.Equal("The tree is empty.\r\n", output.ToString());
         }
+        [Fact]
+        public void Test_FindMaxLevelNodes_BasicTree()
+        {
+            BinaryTree Btree = new BinaryTree();
+            Btree.Root = new Node(1);
+            Btree.Root.Left = new Node(2);
+            Btree.Root.Right = new Node(3);
+            Btree.Root.Left.Left = new Node(4);
+            Btree.Root.Left.Right = new Node(5);
+            Btree.Root.Right.Right = new Node(6);
+            Btree.Root.Left.Left.Left = new Node(7);
+
+            int result = Btree.FindMaxLevelNodes();
+            Assert.Equal(2, result);
+        }
+
+        [Fact]
+        public void Test_FindMaxLevelNodes_MultipleLevelsWithSameMaxNodes()
+        {
+            BinaryTree Btree = new BinaryTree();
+            Btree.Root = new Node(1);
+            Btree.Root.Left = new Node(2);
+            Btree.Root.Right = new Node(3);
+            Btree.Root.Left.Left = new Node(4);
+            Btree.Root.Left.Right = new Node(5);
+            Btree.Root.Right.Right = new Node(7);
+            Btree.Root.Left.Left.Left = new Node(8);
+            Btree.Root.Left.Right.Left = new Node(9);
+            Btree.Root.Right.Right.Left = new Node(10);
+
+            int result = Btree.FindMaxLevelNodes();
+            Assert.Equal(2, result);
+        }
 
     }
 }

@@ -23,7 +23,7 @@ namespace LinkedList
         public void AddNode(int data)
         {
             Node newNodew = new Node(data);
-            {
+            
                 Node pointer = Head;
                 if (Head == null)
                 {
@@ -40,7 +40,7 @@ namespace LinkedList
                     pointer.next = newNodew;
 
                 }
-            }
+            
         }
 
         public void AddFirst(Node node)
@@ -267,6 +267,43 @@ namespace LinkedList
           
             Head = newTail.next;
             newTail.next = null;
+        }
+
+        public bool InsertNode(int data, int index)
+        {
+            // Step 1: Create a new node with the given data
+            Node newNode = new Node(data);
+
+            // Step 2: Handle insertion at index 0 (add at head)
+            if (index == 0)
+            {
+                newNode.next = Head;
+                Head = newNode;
+                return true;
+            }
+
+            // Step 3: Initialize a pointer to traverse the list
+            Node current = Head;
+            int currentIndex = 0;
+
+            // Step 4: Traverse the list to find the position before the specified index
+            while (current != null && currentIndex < index - 1)
+            {
+                current = current.next;
+                currentIndex++;
+            }
+
+            // Step 5: If current is null, the index is out of bounds
+            if (current == null)
+            {
+                Console.WriteLine("Error: Invalid index");
+                return false;
+            }
+
+            // Step 6: Insert the new node
+            newNode.next = current.next;
+            current.next = newNode;
+            return true;
         }
 
 
