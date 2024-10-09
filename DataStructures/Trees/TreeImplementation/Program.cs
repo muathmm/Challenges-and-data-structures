@@ -105,8 +105,11 @@
 
             //    Btree.PrintRightView(Btree.Root);  // Output: 2 5 6 7
 
-            int maxLevel = Btree.FindMaxLevelNodes();
-            Console.WriteLine($"Level with maximum nodes: {maxLevel}");
+            //int maxLevel = Btree.FindMaxLevelNodes();
+            //Console.WriteLine($"Level with maximum nodes: {maxLevel}");
+
+            int minDepth = Btree.MinDepth(Btree.Root);
+            Console.WriteLine("the Min Depth Nodes : " + minDepth);
 
         }
     }
