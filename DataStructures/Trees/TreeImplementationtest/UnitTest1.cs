@@ -1,4 +1,5 @@
-﻿using TreeImplementation;
+﻿using System.Xml.Linq;
+using TreeImplementation;
 
 namespace TreeImplementationtest
 {
@@ -462,6 +463,49 @@ namespace TreeImplementationtest
             Btree.Root.Right.Right.Left = new Node(10);
 
             int result = Btree.FindMaxLevelNodes();
+            Assert.Equal(2, result);
+        }
+
+
+        [Fact]
+        public void Test_EmptyTree_ReturnsZero()
+        {
+            BinaryTree Btree = new BinaryTree(1);
+            Btree.Root = null;
+            var root = Btree.Root;
+
+
+            int result = Btree.MinDepth(root);
+
+            Assert.Equal(0, result);
+        }
+
+        // Test for a tree with varying depths
+        [Fact]
+        public void Test_MultipleNodesWithVaryingDepths()
+        {
+            BinaryTree Btree = new BinaryTree(1);
+            Btree.Root.Left = new Node(2);
+            Btree.Root.Right = new Node(3);
+            Btree.Root.Left.Left = new Node(4);
+
+            int result = Btree.MinDepth(Btree.Root);
+
+            Assert.Equal(2, result);
+        }
+
+        // Another test for a tree with greater depths
+        [Fact]
+        public void Test_MultipleNodesWithDeeperDepths()
+        {
+            BinaryTree Btree = new BinaryTree(1);
+
+            Btree.Root.Left = new Node(2);
+            Btree.Root.Right = new Node(3);
+            Btree.Root.Left.Left = new Node(4);
+            Btree.Root.Left.Right = new Node(5);
+            Btree.Root.Left.Right.Right = new Node(6);
+            int result = Btree.MinDepth(Btree.Root);
             Assert.Equal(2, result);
         }
 

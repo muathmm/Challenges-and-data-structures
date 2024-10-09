@@ -76,3 +76,5 @@
 [ Data Structure: Binary Tree - Print Right View](DataStructures/Trees/PrintRightView.png)
 
 [ Data Structure: Binary Tree - MaxLevelNodes](DataStructures/Trees/Max-Level-Nodes.png)
+
+[ Data Structure: Binary Tree - MinimumDepth](DataStructures/Trees/MinimumDepth.png)
